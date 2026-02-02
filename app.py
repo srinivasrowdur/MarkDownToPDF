@@ -5,7 +5,7 @@ import streamlit as st
 from markdown import markdown
 from xhtml2pdf import pisa
 
-DEFAULT_MD = """# Markdown to PDF\n\nType your **Markdown** on the left.\n\n- Headings\n- Lists\n- *Emphasis*\n\n> Blockquotes are supported too.\n\n```python\nprint("Hello, PDF!")\n```\n"""
+DEFAULT_MD = """# Markdown to PDF\n\nType your **Markdown** on the left.\n\n- Headings\n- Lists\n- *Emphasis*\n\n> Blockquotes are supported too.\n\n```python\nprint(\"Hello, PDF!\")\n```\n"""
 
 
 @st.cache_data(show_spinner=False)
@@ -17,7 +17,7 @@ def markdown_to_pdf_bytes(md_text: str) -> bytes:
     html = f"""<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset=\"utf-8\" />
     <style>
       body {{
         font-family: Arial, Helvetica, sans-serif;
@@ -32,7 +32,7 @@ def markdown_to_pdf_bytes(md_text: str) -> bytes:
         margin: 4px 0;
       }}
       code, pre {{
-        font-family: "Courier New", Courier, monospace;
+        font-family: \"Courier New\", Courier, monospace;
         background: #f6f6f6;
       }}
       pre {{
